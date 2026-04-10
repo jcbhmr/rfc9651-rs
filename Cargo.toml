@@ -1,0 +1,18 @@
+[package]
+name = "rfc9651"
+version = "1.0.0"
+edition = "2024"
+
+[dependencies]
+thiserror = "2.0.18"
+
+[features]
+default = ["std"]
+std = []
+serde = []
+
+[dev-dependencies]
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+static-regular-grammar = "2.0.2"
+typify = "0.6.1"
