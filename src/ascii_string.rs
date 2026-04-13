@@ -1,5 +1,11 @@
-use alloc::{string::String, vec::{Vec, Drain}};
-use core::{mem, ops::{Deref, RangeBounds}};
+use alloc::{
+    string::String,
+    vec::{Drain, Vec},
+};
+use core::{
+    mem,
+    ops::{Deref, RangeBounds},
+};
 
 #[derive(Debug, Clone, PartialEq, Eq, Hash, Default)]
 #[repr(transparent)]

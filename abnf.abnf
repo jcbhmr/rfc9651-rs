@@ -1,14 +1,15 @@
-; > This section uses the Augmented Backus-Naur Form (ABNF) notation [RFC5234] to
-; > illustrate the expected syntax of Structured Fields. However, it cannot be
-; > used to validate their syntax because it does not capture all requirements.
-; >
-; > This section is non-normative. If there is disagreement between the parsing
-; > algorithms and ABNF, the specified algorithms take precedence.
-;
-; -- [Appendix C. ABNF | RFC9651]
-;
-; [RFC5234]: https://www.rfc-editor.org/rfc/rfc9651#RFC5234
-; [Appendix C. ABNF | RFC9651]: https://www.rfc-editor.org/rfc/rfc9651#name-abnf
+
+;; “This section uses the Augmented Backus-Naur Form (ABNF) notation [RFC5234] to
+;; illustrate the expected syntax of Structured Fields. However, it cannot be
+;; used to validate their syntax because it does not capture all requirements.
+;;
+;; This section is non-normative. If there is disagreement between the parsing
+;; algorithms and ABNF, the specified algorithms take precedence.”
+;;
+;; — [Appendix C. ABNF | RFC9651]
+;;
+;; [RFC5234]: https://www.rfc-editor.org/rfc/rfc9651#RFC5234
+;; [Appendix C. ABNF | RFC9651]: https://www.rfc-editor.org/rfc/rfc9651#name-abnf
 
 ;#region https://www.rfc-editor.org/rfc/rfc9651#name-abnf
 sf-list = list-member *( OWS "," OWS list-member )

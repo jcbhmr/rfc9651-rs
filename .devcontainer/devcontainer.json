@@ -3,7 +3,8 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "arniu.vscode-abnf"
+        "arniu.vscode-abnf",
+        "mathematic.vscode-pdf"
       ]
     }
   }

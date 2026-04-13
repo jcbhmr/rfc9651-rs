@@ -1,4 +1,25 @@
 #![no_std]
+#![doc(html_favicon_url = "")]
+#![doc(html_logo_url = "")]
+#![doc(html_playground_url = "https://play.rust-lang.org/")]
+//!
+//! The documentation for this Rust package contains quotation excerpts from
+//! [RFC 9651: Structured Field Values for
+//! HTTP](https://www.rfc-editor.org/rfc/rfc9651).
+//!
+//! > # Copyright Notice
+//! >
+//! > Copyright (c) 2024 IETF Trust and the persons identified as the document
+//! > authors. All rights reserved.
+//! >
+//! > This document is subject to BCP 78 and the IETF Trust's Legal Provisions
+//! > Relating to IETF Documents (https://trustee.ietf.org/license-info) in
+//! > effect on the date of publication of this document. Please review these
+//! > documents carefully, as they describe your rights and restrictions with
+//! > respect to this document. Code Components extracted from this document
+//! > must include Revised BSD License text as described in Section 4.e of the
+//! > Trust Legal Provisions and are provided without warranty as described in
+//! > the Revised BSD License.
 //!
 //! > # 1.1. Intentionally Strict Processing
 //! >
@@ -22,15 +43,26 @@
 //! > sender), an error in one party's value is likely to cause the entire field
 //! > value to fail parsing.
 //!
-//! &mdash; [1.1. Intentionally Strict Processing | RFC 9651](https://www.rfc-editor.org/rfc/rfc9651#name-intentionally-strict-proces)
+//! &mdash; [1.1. Intentionally Strict Processing | RFC
+//! 9651](https://www.rfc-editor.org/rfc/rfc9651#name-intentionally-strict-proces)
 //!
 //! > # 2.2. Error Handling
 //! >
-//! > When parsing fails, the entire field is ignored (see Section 4.2). Field definitions cannot override this because doing so would preclude handling by generic software; they can only add additional constraints (for example, on the numeric range of Integers and Decimals, the format of Strings and Tokens, the types allowed in a Dictionary's values, or the number of Items in a List).
+//! > When parsing fails, the entire field is ignored (see Section 4.2). Field
+//! > definitions cannot override this because doing so would preclude handling
+//! > by generic software; they can only add additional constraints (for
+//! > example, on the numeric range of Integers and Decimals, the format of
+//! > Strings and Tokens, the types allowed in a Dictionary's values, or the
+//! > number of Items in a List).
 //! >
-//! > When field-specific constraints are violated, the entire field is also ignored, unless the field definition defines other handling requirements. For example, if a header field is defined as an Item and required to be an Integer, but a String is received, it should be ignored unless that field's definition explicitly specifies otherwise.
+//! > When field-specific constraints are violated, the entire field is also
+//! > ignored, unless the field definition defines other handling requirements.
+//! > For example, if a header field is defined as an Item and required to be an
+//! > Integer, but a String is received, it should be ignored unless that
+//! > field's definition explicitly specifies otherwise.
 //!
-//! &mdash; [2.2. Error Handling | RFC 9651](https://www.rfc-editor.org/rfc/rfc9651#name-error-handling)
+//! &mdash; [2.2. Error Handling | RFC
+//! 9651](https://www.rfc-editor.org/rfc/rfc9651#name-error-handling)
 //!
 //! > # 6. Security Considerations
 //! >
@@ -53,7 +85,19 @@
 //! > [[PRECIS](https://www.rfc-editor.org/rfc/rfc9651#RFC8264)] and
 //! > [[UNICODE-SECURITY](https://www.rfc-editor.org/rfc/rfc9651#UNICODE-SECURITY)].
 //!
-//! &mdash; [6. Security Considerations | RFC 9651](https://www.rfc-editor.org/rfc/rfc9651#name-security-considerations)
+//! &mdash; [6. Security Considerations | RFC
+//! 9651](https://www.rfc-editor.org/rfc/rfc9651#name-security-considerations)
+
+#[cfg(doc)]
+pub mod _rfc9651 {
+    //! here:
+    //!
+    // <iframe src="https://www.rfc-editor.org/rfc/rfc9651" style="width: 100%; height: 100%;"></iframe>
+    // <script type="module" src="https://cdn.jsdelivr.net/npm/pdfjs-viewer-element/dist/pdfjs-viewer-element.js"></script>
+    // <pdfjs-viewer-element src="https://www.rfc-editor.org/rfc/rfc9651.pdf" style="width: 100%; height: 100vh;"></pdfjs-viewer-element>
+
+    pub struct Hello;
+}
 
 mod ascii_string;
 

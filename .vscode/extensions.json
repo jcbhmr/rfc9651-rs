@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "arniu.vscode-abnf"
+        "arniu.vscode-abnf",
+        "mathematic.vscode-pdf"
     ]
 }
