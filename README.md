@@ -107,6 +107,10 @@ This Cargo package is intended to:
 - Offer an API to serialize a `Dictionary`, `List`, or `Item` into a `String`.
 - Offer an API that is more [SAX](https://en.wikipedia.org/wiki/Simple_API_for_XML)-like for parsing `&str` as any of the structured field value types. This would reduce reliance on allocations for extraneous intermediate fields that a consumer may not care about.
 
+```sh
+cargo run --package xtask --bin generate
+```
+
 ### Including RFC document in source control
 
 You can store the whole RFC document in source control.
