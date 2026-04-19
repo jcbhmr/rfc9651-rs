@@ -4,27 +4,10 @@
 
 🤓 [@jcbhmr](https://jcbhmr.com)'s Rust implementation of [<cite>Structured Field Values for HTTP</cite>](https://www.rfc-editor.org/rfc/rfc9651)
 
-<table align=center>
-<tr><td>
+<table align=center><td>
 
 ```rust
-// Reporting-Endpoints HTTP header
-let reporting_endpoints = r#"mycsp="https://example.org/csp""#;
-let reporting_endpoints: Dictionary = reporting_endpoints.parse()?;
-for (name, url) in reporting_endpoints.iter() {
-    let url = url.try_unwrap_string()?;
-    println!("Endpoint '{}' is {}", name, url);
-}
-```
-
-<tr><td>
-
-```rust
-// Sec-CH-UA-Mobile HTTP header
-let sec_ch_ua_mobile = "?0";
-let sec_ch_ua_mobile: Item = sec_ch_ua_mobile.parse()?;
-let sec_ch_ua_mobile = sec_ch_ua_mobile.try_unwrap_boolean()?;
-println!("Is this a mobile device? {}", if sec_ch_ua_mobile { "Yes" } else { "No" });
+// TODO
 ```
 
 </table>
@@ -39,9 +22,13 @@ You can install this package from [crates.io](https://crates.io/) using [Cargo](
 cargo add jcbhmr-rfc9651
 ```
 
-### Features
+If you want to install this package for use with `#![no_std]`, make sure to use the `--no-default-features` flag.
 
-💡 Install this package as `#![no_std]` compatible using `--no-default-features --features alloc` when running `cargo add`.
+```sh
+cargo add jcbhmr-rfc9651 --no-default-features
+```
+
+### Features
 
 - **`alloc`** (enabled by default): Enable automatically using the `Global` allocator.
 - **`std`** (enabled by default): Enable integration with the Rust standard library.
@@ -69,7 +56,7 @@ for (name, item) in dictionary.iter() {
 // bar: 2
 ```
 
-[`ToString`](https://doc.rust-lang.org/std/string/trait.ToString.html) implementations are also provided (via `Display`), so you can easily serialize these types back into strings.
+[`ToString`](https://doc.rust-lang.org/std/string/trait.ToString.html) implementations are also provided (via [`Display`](https://doc.rust-lang.org/std/fmt/trait.Display.html)), so you can easily serialize constructed `Dictionary`, `List`, and `Item` values into strings.
 
 ```rust
 let mut dictionary = Dictionary::new();
