@@ -20,5 +20,6 @@ std = ["chumsky/std", "thiserror/std"]
 serde = ["chumsky/serde"]
 
 [dev-dependencies]
+derive_more = { version = "2.1.1", features = ["full"] }
 serde = { version = "1.0.228", features = ["derive"] }
 serde_json = "1.0.149"
